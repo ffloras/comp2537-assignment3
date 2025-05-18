@@ -126,7 +126,6 @@ function setLevelAndStart() {
       $("#start").css("display", "none");
       $("#reset").css("display", "inline");
       $("#title").css("display", "none");
-      $("#style").css("display", "block");
       
       resolve(level);
       return;
@@ -286,6 +285,7 @@ function setupCards(pokemons, level) {
     grid.appendChild(newCard);
   }
   $("#game_grid").css("display", "flex");
+  $("#style").css("display", "block");
 }
 
 function gameEnd(winStatus) {
