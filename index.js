@@ -4,14 +4,14 @@ const levels = [
     cards: 6,
     width: "600px",
     height: "400px",
-    time: { mins: 0, secs: 20 },
+    time: { mins: 0, secs: 40 },
   },
   {
     difficulty: "medium",
     cards: 12,
     width: "800px",
     height: "600px",
-    time: { mins: 0, secs: 40 },
+    time: { mins: 0, secs: 50 },
   },
   {
     difficulty: "hard",
