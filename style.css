@@ -1,0 +1,89 @@
+body {
+  margin: 0px;
+}
+
+#game_grid {
+  border: 2px tomato solid;
+  width: 600px;
+  height: 400px;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+#title {
+  margin: 0 auto;
+  width: 600px;
+  text-align: center;
+  color: red;
+}
+
+#game-status {
+  margin: 0 auto;
+}
+
+#button-container {
+  width: 40%;
+  
+}
+
+#reset {
+  display: none;
+}
+
+.form-switch .form-check-input:checked {
+  background-color: rgb(0, 0, 0);
+  border-color: rgb(0, 0, 0);
+}
+
+.form-switch .form-check-input {
+  border-color: rgb(0, 0, 0);
+}
+
+.title-img {
+  width: 300px;
+  margin: 0 auto;
+  display: block;
+}
+
+.card {
+  width: 33.3%;
+  position: relative;
+  transition: transform 1s;
+  perspective: 1000px;
+  transform-style: preserve-3d;
+}
+
+
+img {
+  width: 100%
+}
+
+.front_face,
+.back_face {
+  position: absolute;
+  backface-visibility: hidden;
+}
+
+.difficulty-button {
+  background-color: #E9C41D;
+}
+
+.difficulty-button:hover {
+  background-color: #d6b522;
+}
+
+
+.flip {
+  transform: rotateY(180deg);
+}
+
+.front_face {
+  transform: rotateY(180deg);
+}
+
+@media (max-width: 1000px) {
+  #button-container {
+    width: 95%;
+  }
+}
