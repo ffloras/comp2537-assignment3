@@ -242,9 +242,6 @@ async function choosePokemons(allPokemons, level) {
       pokemonArray.push({ sprite: sprite, name: responses[i].name });
     }
   }
-  console.log(levels[level].cards)
-  console.log(pokemonNameArray)
-  console.log(pokemonArray)
 
   pokemonArray = pokemonArray.concat(pokemonArray);
   randomizedArray = [];
@@ -272,7 +269,6 @@ function setupCards(pokemons, level) {
   for (let i = 0; i < levels[level].cards; i++) {
     let newCard = cardTemplate.content.cloneNode(true);
     let pokemonImg = newCard.querySelector(".front_face");
-    //console.log(pokemons)
 
     pokemonImg.src = pokemons[i].sprite;
     pokemonImg.id = "img" + (i + 1);
@@ -280,7 +276,6 @@ function setupCards(pokemons, level) {
     newCard.querySelector(".card").style.width = `${
       ((level + 2) / numCards) * 100
     }%`;
-    console.log((level + 2) / numCards);
 
     grid.appendChild(newCard);
   }
@@ -422,47 +417,3 @@ async function getPokemonSet() {
   });
 }
 
-// async function setup() {
-//   let firstCard = undefined
-//   let secondCard = undefined
-//   $(".card").on(("click"), async function () {
-//     if ($(this).hasClass("disabled")) {
-//       return;
-//     }
-
-//     $(this).addClass("disabled");
-//     $(this).toggleClass("flip");
-
-//     if (!firstCard) {
-//       //$(this).toggleClass("flip");
-//       firstCard = $(this).find(".front_face")[0]
-//     }
-//     else {
-//       let nextCard = $(this).find(".front_face")[0];
-
-//       if (nextCard != firstCard) {
-//         $(this).toggleClass("flip");
-//         secondCard = nextCard;
-
-//         console.log(firstCard, secondCard);
-
-//         $(`#${firstCard.id}`).parent().off("click");
-//         $(`#${secondCard.id}`).parent().off("click");
-
-//         if (firstCard.src == secondCard.src) {
-//           console.log("match")
-//         } else {
-//           console.log("no match")
-//           await setTimer(firstCard, secondCard);
-//           console.log(firstCard.id + " " + secondCard.id)
-//           $(`#${firstCard.id}`).parent().on("click");
-//           $(`#${secondCard.id}`).parent().on("click");
-//         }
-//         firstCard = undefined;
-//         secondCard = undefined;
-
-//       }
-
-//     }
-//   });
-// }
