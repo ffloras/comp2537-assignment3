@@ -403,7 +403,6 @@ const setWinTimer = () => {
 async function getPokemonSet() {
   return new Promise((resolve, reject) => {
     let offset = Math.floor(Math.random() * (maxPokemon - limit));
-    console.log(offset);
     fetch(`https://pokeapi.co/api/v2/pokemon?offset=${offset}&limit=${limit}`)
       .then((response) => {
         return response.json();
