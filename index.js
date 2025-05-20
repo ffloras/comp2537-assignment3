@@ -22,7 +22,7 @@ const levels = [
   },
 ];
 const maxPokemon = 1302;
-const limit = 100;
+const limit = 250;
 let gameActive = true;
 
 async function setup() {
